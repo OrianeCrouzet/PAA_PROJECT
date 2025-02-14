@@ -1,0 +1,4 @@
+ville(PARIS).
+ville(LYON).
+route(PARIS,LYON).
+recharge(PARIS).

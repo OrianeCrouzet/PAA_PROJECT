@@ -1,0 +1,14 @@
+ville(PARIS).
+ville(AMSTERDAM).
+ville(LYON).
+ville(ROUEN).
+ville(LILLE).
+ville(MADRID).
+route(PARIS,AMSTERDAM).
+route(PARIS,LYON).
+route(AMSTERDAM,MADRID).
+route(LYON,ROUEN).
+route(ROUEN,LILLE).
+recharge(PARIS).
+recharge(AMSTERDAM).
+recharge(ROUEN).
