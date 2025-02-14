@@ -1,6 +1,12 @@
-# paa_crouzet_gameiro_costa_pugenger
+# Set dominant minimal de sommets
 
-Le projet vise à développer un logiciel pour la planification de bornes de recharge pour véhicules électriques dans une communauté d'agglomération. Les contraintes incluent l'accessibilité, chaque ville devant avoir ses bornes ou être connectée à une ville équipée. L'objectif est de minimiser le coût global du projet tout en respectant ces contraintes. Le logiciel doit représenter les villes et les routes, garantir l'accessibilité et calculer le coût optimal en termes de zones de recharge à construire.
+Le projet vise à développer un logiciel pour la planification de bornes de recharge pour véhicules électriques dans une communauté d'agglomération. Les contraintes incluent l'accessibilité, chaque ville devant avoir ses bornes ou être connectée à une ville équipée. L'objectif est de minimiser le coût global du projet tout en respectant ces contraintes. 
+Le logiciel doit représenter les villes et les routes, garantir l'accessibilité et calculer le coût optimal en termes de zones de recharge à construire.
+
+### Equipe de développement
+- CROUZET Oriane
+- PUGENGER Riad
+- GAMEIRO COSTA Shawn
 
 ## Point d'entrée du projet
 
@@ -20,20 +26,20 @@ Assurez-vous d'avoir Java installé sur votre système.
 Toutes les fonctionnalités demandées sont correctement implémentées dans le projet.
 
 ## Algorithmes
-### Presentation
+### Présentation
 
-Le premier algorithme cherche a trouver un ensemble dominant de sommets. Le second tente de trouver un ensemble minimal dominant de sommets. Les deux algorithmes fonctionnent globalement de la même façon, le premier etant plus naif que le second.
+Le premier algorithme cherche à trouver un ensemble dominant de sommets. Le second tente de trouver un ensemble minimal dominant de sommets. Les deux algorithmes fonctionnent globalement de la même façon, le premier étant plus naïf que le second.
 
-En effet, pour le premier algorithme, la solution n'est pas forcement optimale puisqu'il commence toujours par le premier sommet de l'agglomeration. Le second commence par la "meilleure" ville pour executer l'algorithme.
+En effet, pour le premier algorithme, la solution n'est pas forcément optimale puisqu'il commence toujours par le premier sommet de l'agglomération. Le second commence par la "meilleure" ville pour exécuter l'algorithme.
 
 ### Fonctionnement du premier algorithme
 
 L'algorithme parcourt tous les sommets de l'agglomération. Pour chaque sommet non visité, on ajoute le sommet à la solution et marque le sommet comme visité.
-L'algoritme explore alors les voisins de ce sommet et les marque comme visités (puisque reliés a la ville qui possede une borne).
-A la fin on obtient un ensemble de sommets qui constituent notre solution.
+L'algoritme explore alors les voisins de ce sommet et les marque comme visités (puisque reliés à la ville qui possède une borne).
+A la fin, on obtient un ensemble de sommets qui constituent notre solution.
 
-### Fonctionnement du deuxieme algorithme
+### Fonctionnement du deuxième algorithme
 
-Ici, on se base sur le meme principe de sommets domines/non domines, cependant certaines modifications permettent d'ameliorer l'algorithme precedent.
-On possede un ensemble de sommets non domines (initialement toutes les villes) et un ensemble pour la solution minimale. Tant qu'il reste des villes non dominees, on continue l'algorithme. A chaque tour de boucle, on cherche la "meilleure" ville et on l'ajoute dans la solution : la "meilleure" ville est celle qui possede le plus grand nombre de voisins non domines.
-Cet ajout permet de commencer l'algorithme au sommet le plus interessant (mais egalement le plus contraignant), et ainsi reduire le nombre de villes avec une borne.
+Ici, on se base sur le même principe de sommets domines/non domines, cependant certaines modifications permettent d'améliorer l'algorithme précédent.
+On possède un ensemble de sommets non dominés (initialement toutes les villes) et un ensemble pour la solution minimale. Tant qu'il reste des villes non dominées, on continue l'algorithme. A chaque tour de boucle, on cherche la "meilleure" ville et on l'ajoute dans la solution : la "meilleure" ville est celle qui possède le plus grand nombre de voisins non dominés.
+Cet ajout permet de commencer l'algorithme au sommet le plus intéréssant (mais également le plus contraignant), et ainsi réduire le nombre de villes avec une borne.
